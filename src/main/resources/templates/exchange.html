@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <title>Currency Exchange</title>
+  </head>
+  <body>
+    <br />
+    <div class="container d-flex justify-content-center">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <div class="col">
+              <h1>Currency Exchange</h1>
+            </div>
+          </div>
+          <div class="justify-content-center">
+            <label class="form-label">Amount</label>
+            <p>
+              <span data-th-text="${fromCurry}">&nbsp;</span><span data-th-text="${currency.query.amounts}"></span>
+            </p>
+            <br />
+            <label class="form-label">Converted Amount</label>
+            <p>
+              <span data-th-text="${toCurry}">&nbsp;</span><span data-th-text="${currency.result}"></span>
+            </p>
+            <br />
+            <form method="GET" action="/">
+              <button type="submit" class="btn btn-warning btn-lg">Back</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
